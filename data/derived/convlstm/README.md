@@ -10,10 +10,10 @@ Training additionally requires the fixed loss-weight file:
 data/derived/convlstm/loss_weight_map_mw4.npz
 ```
 
-The file will be distributed with the derived-data archive on Zenodo. Its NPZ
-key is `sequence_array`. The code used to generate this weight map is not part
-of the repository.
+The file is distributed with the associated Zenodo archive. Its NPZ key is
+`sequence_array`. The code used to generate this weight map is not part of the
+repository.
 
 `region_meta.json` records the study bounds, grid dimensions, channel order,
-100-km neighborhood setting, and minimum local WSM record count.
-
+100-km neighborhood setting, and minimum local WSM record count. It is written
+by the dataset builder and is not tracked in Git.

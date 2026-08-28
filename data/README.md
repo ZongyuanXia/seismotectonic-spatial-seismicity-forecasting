@@ -42,7 +42,8 @@ same monthly naming convention.
 
 ## Generated data
 
-The RF pipeline creates the following analysis products:
+The RF pipeline creates the following local analysis products. They are not
+tracked in Git because they can be regenerated from WSM2025:
 
 ```text
 data/derived/wsm2025_filtered_records.csv
@@ -63,7 +64,8 @@ directory.
 
 ## ConvLSTM derived data
 
-The seven-channel arrays are generated under `data/derived/convlstm/dataset/`.
-The fixed loss-weight file is downloaded from the Zenodo derived-data archive
-and placed at `data/derived/convlstm/loss_weight_map_mw4.npz`. See
+The seven-channel arrays and `region_meta.json` are generated under
+`data/derived/convlstm/` and are not tracked in Git. The fixed loss-weight file
+is downloaded from the associated Zenodo archive and placed at
+`data/derived/convlstm/loss_weight_map_mw4.npz`. See
 `data/derived/convlstm/README.md` for the expected file layout.

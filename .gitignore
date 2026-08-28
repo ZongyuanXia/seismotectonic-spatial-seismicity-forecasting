@@ -21,6 +21,8 @@ venv/
 
 # Event-level RF intermediates are regenerated locally from WSM2025
 /data/derived/wsm2025_filtered_records.csv
+/data/derived/region_record_counts.csv
+/data/derived/sample_availability_by_region_threshold.csv
 /data/derived/regional_records/
 /data/derived/event_features/
 /data/derived/labeled_events/
@@ -31,11 +33,16 @@ venv/
 # ConvLSTM arrays, model artifacts, and detailed outputs are distributed through Zenodo
 /data/derived/convlstm/dataset/
 /data/derived/convlstm/*.npz
+/data/derived/convlstm/region_meta.json
 /results/convlstm/checkpoints/
 /results/convlstm/evaluation/
-/results/convlstm/area_summary.csv
+/results/convlstm/*.csv
 /results/convlstm/figure5_source/
 /results/convlstm/robustness/
 
-# Publication-quality TIFF exports are retained locally or archived with Zenodo
-/results/figures/*.tif
+# Manuscript result tables are generated locally or distributed through Zenodo
+/results/random_forest/summaries/*.csv
+
+# Figure exports remain local; retain only the manually assembled Figure 1
+/results/figures/*
+!/results/figures/Fig1.png
