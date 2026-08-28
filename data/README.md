@@ -66,6 +66,7 @@ directory.
 
 The seven-channel arrays and `region_meta.json` are generated under
 `data/derived/convlstm/` and are not tracked in Git. The fixed loss-weight file
-is downloaded from the associated Zenodo archive and placed at
-`data/derived/convlstm/loss_weight_map_mw4.npz`. See
+is downloaded from the associated Zenodo dataset
+([10.5281/zenodo.22140383](https://doi.org/10.5281/zenodo.22140383)) and placed
+at `data/derived/convlstm/loss_weight_map_mw4.npz`. See
 `data/derived/convlstm/README.md` for the expected file layout.

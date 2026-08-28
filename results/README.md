@@ -2,8 +2,9 @@
 
 Analysis outputs are generated locally and are not tracked in Git. Compact
 source data supporting the manuscript tables and Figures 2-7 are distributed
-through the associated Zenodo record. The DOI will be added after publication
-of the record.
+through the associated Zenodo dataset
+([10.5281/zenodo.22140383](https://doi.org/10.5281/zenodo.22140383)). The DOI is
+reserved and will resolve after publication of the record.
 
 After extracting the archive, use the following paths:
 

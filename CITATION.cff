@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata below."
+title: "Seismotectonic Characteristics and Spatial Seismicity Forecasting"
+type: software
+authors:
+  - family-names: "Xia"
+    given-names: "Zongyuan"
+version: "1.0.0"
+license: MIT
+repository-code: "https://github.com/ZongyuanXia/seismotectonic-spatial-seismicity-forecasting"
+url: "https://github.com/ZongyuanXia/seismotectonic-spatial-seismicity-forecasting"
+abstract: >-
+  Source code for constructing event-level seismotectonic characteristics,
+  evaluating their association with earthquake magnitude using random forests,
+  and assessing the spatial identification ability of ConvLSTM models.
+keywords:
+  - earthquake forecasting
+  - spatial seismicity
+  - seismotectonic characteristics
+  - random forest
+  - ConvLSTM
