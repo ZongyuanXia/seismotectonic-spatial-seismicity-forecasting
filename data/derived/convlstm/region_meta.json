@@ -1,0 +1,46 @@
+{
+  "region_mode": "anchored_crop",
+  "global_H": 3840,
+  "global_W": 3840,
+  "output_H": 340,
+  "output_W": 200,
+  "dlat_deg": 0.046875,
+  "dlon_deg": 0.09375,
+  "configured_bounds": {
+    "lat_min": 30.05,
+    "lat_max": 45.95,
+    "lon_min": 128.1,
+    "lon_max": 146.8
+  },
+  "crop_box_closed": {
+    "x_min": 3286,
+    "x_max": 3485,
+    "y_min": 2561,
+    "y_max": 2900
+  },
+  "effective_bounds": {
+    "lat_min": 30.046874999999986,
+    "lat_max": 45.984375,
+    "lon_min": 128.0625,
+    "lon_max": 146.8125
+  },
+  "channel_order": [
+    "MAG",
+    "DEPTH_LOCAL_MEAN",
+    "DEPTH_LOCAL_STD",
+    "MAX_SPREAD_100KM_DEG",
+    "STD_LOCAL",
+    "REGIME_ENTROPY",
+    "REGIME_GINI"
+  ],
+  "channel_count": 7,
+  "target_y": "last frame, channel 0, MAG only",
+  "wsm_neighbor_km": 100.0,
+  "wsm_min_n_local": 5,
+  "wsm_std_threshold": 25.0,
+  "depth_std_map_max": 100.0,
+  "wsm_time_mode": "cumulative",
+  "wsm_spatial_rule": "row-dependent candidate cell rectangle + true <= wsm_neighbor_km distance filter",
+  "wsm_precompute_direction_field": true,
+  "step2_storage": "sparse frame cache + sample frame references"
+}

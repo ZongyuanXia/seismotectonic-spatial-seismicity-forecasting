@@ -1,0 +1,41 @@
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# Python caches and local environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.venv/
+venv/
+
+# Local configuration and logs
+.env
+*.log
+
+# Third-party raw data are downloaded separately and are not redistributed
+/data/raw/
+
+# Event-level RF intermediates are regenerated locally from WSM2025
+/data/derived/wsm2025_filtered_records.csv
+/data/derived/regional_records/
+/data/derived/event_features/
+/data/derived/labeled_events/
+
+# Full repeated RF outputs are distributed separately through Zenodo
+/results/random_forest/runs/
+
+# ConvLSTM arrays, model artifacts, and detailed outputs are distributed through Zenodo
+/data/derived/convlstm/dataset/
+/data/derived/convlstm/*.npz
+/results/convlstm/checkpoints/
+/results/convlstm/evaluation/
+/results/convlstm/area_summary.csv
+/results/convlstm/figure5_source/
+/results/convlstm/robustness/
+
+# Publication-quality TIFF exports are retained locally or archived with Zenodo
+/results/figures/*.tif
