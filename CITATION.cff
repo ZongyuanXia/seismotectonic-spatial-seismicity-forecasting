@@ -6,6 +6,8 @@ authors:
   - family-names: "Xia"
     given-names: "Zongyuan"
 version: "1.0.0"
+doi: "10.5281/zenodo.22142076"
+date-released: "2026-08-28"
 license: MIT
 repository-code: "https://github.com/ZongyuanXia/seismotectonic-spatial-seismicity-forecasting"
 url: "https://github.com/ZongyuanXia/seismotectonic-spatial-seismicity-forecasting"

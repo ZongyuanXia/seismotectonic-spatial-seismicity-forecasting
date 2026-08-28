@@ -12,6 +12,11 @@ random forests to examine their association with earthquake magnitude. The
 second stage constructs seven-channel spatiotemporal samples and evaluates the
 spatial identification ability of ConvLSTM models.
 
+## Citation and archived results
+
+- Software `v1.0.0`: [10.5281/zenodo.22142076](https://doi.org/10.5281/zenodo.22142076)
+- Result dataset: [10.5281/zenodo.22140383](https://doi.org/10.5281/zenodo.22140383)
+
 ## Repository structure
 
 ```text
