@@ -1,0 +1,22 @@
+{
+  "upstream": "https://github.com/lmizrahi/etas",
+  "upstream_archive": "https://codeload.github.com/lmizrahi/etas/tar.gz/refs/heads/main",
+  "download_date": "2026-10-29",
+  "upstream_archive_pax_headers": {
+    "comment": "097f08b69a4f06f9c38d14799dedfbd4543144e3"
+  },
+  "upstream_archive_sha256": "2caa949d3c99b9ac2330e252cc64af5bbef2d889c6d1b8ff345f8697bffe32a7",
+  "upstream_source_modified": false,
+  "local_adapter": "Background sampler uses normalized weights, kilometre Gaussian and deterministic seed; upstream all-generation simulation is called directly. Initial constrained fit followed by same-data numerical refinement.",
+  "final_result": "results/validation_00000_20090101_v2",
+  "source_sha256": {
+    "fit_etas_trial.py": "0389dddfa7de47733fcd3ee9186278eadeed20956e8cfcce65294874388473d9",
+    "refine_etas_fit.py": "4facb8743a868a40e59373a6f766ce49a1b5206c823334f03472548665d0829b",
+    "predict_etas_trial.py": "eb175b24574fb40c811d496ad95ba7576e84bad9d8e9af8a6d6c6633c3d46c91",
+    "finish_etas_trial.py": "f504dedf1106c5261692dcf9d92306cb4817983a5e33ee1d007f61a6a812ea2d",
+    "check_etas_trial.py": "e8fd98022bcbfe92b456b35598a9e0c195ec16e57443af122dea400ec18f0920",
+    "requirements_ETAS.txt": "6a6ed50ed6f4fe8f4e162a50de977c777a875a150b096ce4c8cbd8993f12cb9d",
+    "README_ETAS.md": "d8f93c6bb4a8dfe2d5299b026d0ef87955592e283ab1def828aa1f66d3801232",
+    "region_meta.json": "13721464652124f9c8596130733b30a5d99188cf1ab503ec3efe612b25850ddf"
+  }
+}

@@ -1,48 +1,32 @@
-# Operating-system and editor files
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-
-# Python caches and local environments
 __pycache__/
-*.py[cod]
-.pytest_cache/
-.mypy_cache/
+*.pyc
 .venv/
-venv/
-
-# Local configuration and logs
-.env
-*.log
-
-# Third-party raw data are downloaded separately and are not redistributed
-/data/raw/
-
-# Event-level RF intermediates are regenerated locally from WSM2025
-/data/derived/wsm2025_filtered_records.csv
-/data/derived/region_record_counts.csv
-/data/derived/sample_availability_by_region_threshold.csv
-/data/derived/regional_records/
-/data/derived/event_features/
-/data/derived/labeled_events/
-
-# Full repeated RF outputs are distributed separately through Zenodo
-/results/random_forest/runs/
-
-# ConvLSTM arrays, model artifacts, and detailed outputs are distributed through Zenodo
-/data/derived/convlstm/dataset/
-/data/derived/convlstm/*.npz
-/data/derived/convlstm/region_meta.json
-/results/convlstm/checkpoints/
-/results/convlstm/evaluation/
-/results/convlstm/*.csv
-/results/convlstm/figure5_source/
-/results/convlstm/robustness/
-
-# Manuscript result tables are generated locally or distributed through Zenodo
-/results/random_forest/summaries/*.csv
-
-# Figure exports remain local; retain only the manually assembled Figure 1
-/results/figures/*
-!/results/figures/Fig1.png
+.DS_Store
+*.pt
+*.pth
+workflow/raw/
+workflow/generated/
+workflow/outputs/
+workflow/datasets/
+workflow/convlstm/runs/
+workflow/compare/compact_compare_summary/
+workflow/baseline/results/
+workflow/baseline/etas/results/
+workflow/baseline/etas/MC_sensitivity_1000_5000_20261030/results/
+workflow/baseline/final_comparison/*.csv
+workflow/baseline/final_comparison/*.npz
+workflow/baseline/final_comparison/*.json
+workflow/rf_analysis/results_1000/
+workflow/rf_pairs/data/
+workflow/rf_pairs/reference/
+workflow/rf_pairs/results/
+workflow/rf_ablation/data/
+workflow/rf_ablation/reference/
+workflow/rf_ablation/results/
+workflow/manuscript/
+workflow/plotting/inputs/figure1/data/
+workflow/plotting/inputs/rf/data/
+workflow/plotting/inputs/convlstm/*.csv
+workflow/plotting/inputs/convlstm/*.json
+workflow/plotting/inputs/convlstm/*.npz
+workflow/plotting/inputs/barline/barline_data.json

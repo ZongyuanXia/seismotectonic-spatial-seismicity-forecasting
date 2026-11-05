@@ -1,0 +1,6 @@
+# See compare/compact_compare_summary/training_receipts.json in the companion data
+# for the exact historical Python/PyTorch/CUDA environment. A CUDA build is optional.
+numpy
+pandas
+torch>=2.1
+scipy

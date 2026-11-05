@@ -1,0 +1,34 @@
+{
+  "creators": [
+    {
+      "name": "Xia, Zongyuan",
+      "affiliation": "Zhejiang University"
+    }
+  ],
+  "version": "2.0.0",
+  "publication_date": "2026-11-05",
+  "keywords": [
+    "earthquake forecasting",
+    "seismotectonic characteristics",
+    "World Stress Map",
+    "ConvLSTM",
+    "Japan"
+  ],
+  "title": "Seismotectonic Characteristics and Spatial Seismicity Forecasting",
+  "upload_type": "software",
+  "license": "mit",
+  "description": "Version 2.0.0 of the software supporting Deep-Learning Forecasts of Spatial Seismicity Considering Hypocentral Depth and Stress Regime. Provides data preprocessing and nine-indicator construction, random-forest magnitude-discriminability analyses, fixed-seed ConvLSTM training and prediction, zero/100-placeholder controls, sensitivity analyses, PI/ETAS/smoothed-seismicity baselines, and generation of all five figures and five tables. The matching data release includes the seven formal checkpoints and individual-sample results. The figure/table workflow has been verified after extracting the release archives; new model training and inference were not rerun during archive preparation.",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/ZongyuanXia/seismotectonic-spatial-seismicity-forecasting",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "10.5281/zenodo.22140382",
+      "relation": "isSupplementTo",
+      "scheme": "doi"
+    }
+  ],
+  "doi": "10.5281/zenodo.23983140"
+}

@@ -1,0 +1,3 @@
+numpy>=1.24
+# Only for regenerating model predictions on the training platform:
+# torch>=2.1

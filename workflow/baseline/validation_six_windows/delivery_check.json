@@ -1,0 +1,19 @@
+{
+  "syntax": "passed",
+  "ETAS_windows_complete": 6,
+  "ETAS_simulations_per_window": 2048,
+  "first_ETAS_window_reused_unchanged": true,
+  "new_history_adapter_first_seed_matches_original": true,
+  "ETAS_PI_exact_count_rows_checked": 48,
+  "ETAS_PI_summary_rows_checked": 8,
+  "first_window_scores_match_previous_export": true,
+  "MAG_six_window_inference_executed": false,
+  "MAG_checkpoint_expected_sha256": "468aa2919415eae1131c30cbc71f7cc8ec40a9e7d522638126ba4741a6c471ac",
+  "window_history_overlap_note": "target windows disjoint; histories overlap; no independent-sample significance claim",
+  "script_sha256": {
+    "run_etas_six_windows.py": "fb40e3b45be7e55d6b1ca2498cdbf40e42eabc0290995dd0740b985073203db2",
+    "common_six.py": "4d79e55dc32b8ba236a3b6667f1c84e44645b491dabda00097e8e8e2ba51055c",
+    "export_mag_six_windows.py": "66f1638198f335fa774186aa26df4139c5956cf17a8c11c5372beb495065ae8e",
+    "core_one_window.py": "809104cc1e212a144afb08766977245cbb3d59ee45adac337faf2c0d41e2db0e"
+  }
+}

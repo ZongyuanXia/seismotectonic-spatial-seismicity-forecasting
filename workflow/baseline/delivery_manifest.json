@@ -1,0 +1,32 @@
+{
+  "version": "pi_japan_4050d_change450d_positive_v1",
+  "local_destination": "/Users/xiazongyuan/1 课题/7 地震震级预测/xzy-小论文1-文件汇总/代码与结果（归档）/九项指标重构归档/baseline",
+  "cloud_destination": "/share/home/22460734/project_MP_1978_2024/baseline",
+  "static_syntax_files": [
+    "check_pi_baseline.py",
+    "pi_core.py",
+    "pi_data.py",
+    "pi_evaluation.py",
+    "run_pi_baseline.py"
+  ],
+  "pi_core_identical_to_user_reference": true,
+  "generated_code_executed": false,
+  "tests_executed": false,
+  "runtime_checks_provided_in": "check_pi_baseline.py",
+  "existing_training_dependencies": {
+    "evaluate_single_symmetric.py": "33b0611bff67efa3ffb2af6634dd6529919bb58e1af49260a360f0ec0fd82f48",
+    "evaluate_cl10_symmetric.py": "0281063df056aee4a25f62ad880af2d7b5ddb33018f4bf8de25dacdc99602277",
+    "spatial_symmetric.py": "10518564f969a5a1381b6d3b69ca0e9186956397eb58ca5aa5700e7cddb7350c",
+    "cl10_data.py": "450484e84229c77879afb95a1800a142cce2e96c90e1c3c9182d785b9387d5a0"
+  },
+  "files_sha256": {
+    "README_PI.md": "59c08daa3af1cfc70bfbb0ec23f9f132dedccf9fd2d19a60ab20e800400f4fad",
+    "check_pi_baseline.py": "8b03723c57f839aef58e2c2e6963d094f0f4ff262ee9005de4395cd08ac9a347",
+    "pi_core.py": "b9c09c5204ae2238c3a0a7bd813c3b8589c37d83bfb238b5410624e9cfcd16bb",
+    "pi_data.py": "0935a6e4e6ddd10b79d1e2e5358e7fab06ff946f3c56987c7fa5b719dd8be732",
+    "pi_evaluation.py": "b2948580d022d32a56c48422656ba28ffc333e90cc496584fd79f5d97102fa85",
+    "requirements_PI.txt": "a83a2a4ed7ab2e022b9b8a83cfa2b8cf52cc243006c597e8b96f90a8365590ac",
+    "run_pi_baseline.py": "7ec2f1eb15234b5caa1006d74f27a4479fa1ad0d1cd8f4f2f416939a4d5c32cc",
+    "source_reference.json": "5ae65c06f661bca2a619d2e3350ef47511c467ff3092a0eafff6002847e7b6eb"
+  }
+}

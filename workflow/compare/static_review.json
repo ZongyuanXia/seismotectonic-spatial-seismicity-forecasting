@@ -1,0 +1,27 @@
+{
+  "static_only": true,
+  "delivered_entrypoints_executed": false,
+  "model_jobs_executed": false,
+  "syntax_and_compile": "passed",
+  "logical_controls": 57,
+  "unique_training_tasks": 41,
+  "A_shared_tasks": 3,
+  "B_tasks": 19,
+  "C_tasks": 19,
+  "fixed_source_models": 19,
+  "source_reference_score_rows": 76,
+  "all_reference_checkpoint_hashes_match_fixed_selection": true,
+  "data_transform_review": "Added channels only; support from valid; constants0/100/255 before inherited /255 normalization",
+  "reused_original_code": "8 vendored files byte-identical to archived training code",
+  "torch_available_locally": false,
+  "python_files_syntax_checked": 14,
+  "frozen_manifest_pin_check": "passed",
+  "reference_rows_mean_sd_and_counts_verified": 76,
+  "inspection_notes": [
+    "Actual transformation code runs only in the cloud; training/validation/test all patched to same data class.",
+    "REAL source results embedded and source checkpoint identities pinned.",
+    "A alias identity checks include training configuration and recorded initial state.",
+    "Standalone summary reads only small CSV/JSON and serializes provenance.",
+    "Checkpoint initialization reproduced from original seeds; never warm-started from fitted source weights."
+  ]
+}

@@ -1,0 +1,430 @@
+{
+  "evaluation_version": "symmetric_band_union_v1",
+  "dataset_sha256": {
+    "manifest": "6c5cac218f20709577718e339a62d72bbe4331de12d87dfb5cedde1b15724447",
+    "sample_index": "0e0db8ee9977136261c649fe53001660e572be5106268862514d9ecab0317118",
+    "usgs_daily": "9a1e200679086a0e0fe481cbeb23f4b27d4afabc34d91cc6bddb929784386c90"
+  },
+  "dependency_sha256": {
+    "run_symmetric_evaluation.py": "0d9eea54a8f25199c77b20f35eebbded3df653e4190e5df0022b5c0485c15804",
+    "evaluate_cl10_symmetric.py": "0281063df056aee4a25f62ad880af2d7b5ddb33018f4bf8de25dacdc99602277",
+    "spatial_symmetric.py": "10518564f969a5a1381b6d3b69ca0e9186956397eb58ca5aa5700e7cddb7350c",
+    "cl10_data.py": "450484e84229c77879afb95a1800a142cce2e96c90e1c3c9182d785b9387d5a0",
+    "predict_cl10.py": "ced03634754df6236340597c13a24d26731f7cfb06c3d5caab406719425b1e2e",
+    "model_cl10.py": "17f48c3cf644eb1ef853436e88b3fc2e37c4c63085c31065d54c45ea6512ea01"
+  },
+  "metric_definition": "P target_only; R prediction_only; CSI expanded_both. P/R/CSI do not share a contingency table.",
+  "version": "core_completion_v1",
+  "date": "2026-11-03",
+  "seed": "run_03",
+  "seed_rule": "maximum daily validation precision of MAG; same initialization/order seeds fixed for all core models",
+  "models": [
+    {
+      "family": "triple",
+      "model": "MAG",
+      "seed": "run_03",
+      "selected_channels": [
+        0
+      ],
+      "selected_names": "MAG",
+      "checkpoint_sha256": "468aa2919415eae1131c30cbc71f7cc8ec40a9e7d522638126ba4741a6c471ac",
+      "best_epoch": 1,
+      "init_seed": 1438401796,
+      "order_seed": 60007756,
+      "eligible_seed_count": 5,
+      "validation": {
+        "daily": {
+          "precision": 0.6361607595596547,
+          "recall": 0.6854865981955918,
+          "CSI": 0.3320868995942472
+        },
+        "nonoverlap": {
+          "precision": 0.6614971828838642,
+          "recall": 0.6792886317129431,
+          "CSI": 0.33946705364707513
+        }
+      }
+    },
+    {
+      "family": "triple",
+      "model": "pair_01_02",
+      "seed": "run_03",
+      "selected_channels": [
+        0,
+        1,
+        2
+      ],
+      "selected_names": "MAG,DEPTH_LOCAL_MEAN,DEPTH_LOCAL_STD",
+      "checkpoint_sha256": "b76277d20caae19f11690cf0d83f199b9ddcdb3702516a5d21fb33dd2cd368a9",
+      "best_epoch": 1,
+      "init_seed": 1438401796,
+      "order_seed": 60007756,
+      "eligible_seed_count": 3,
+      "validation": {
+        "daily": {
+          "precision": 0.7011316156840142,
+          "recall": 0.6332961981452319,
+          "CSI": 0.33534620093000805
+        },
+        "nonoverlap": {
+          "precision": 0.7217128105472095,
+          "recall": 0.6279956623457648,
+          "CSI": 0.3446401463263488
+        }
+      }
+    },
+    {
+      "family": "triple",
+      "model": "pair_03_08",
+      "seed": "run_03",
+      "selected_channels": [
+        0,
+        3,
+        8
+      ],
+      "selected_names": "MAG,MAX_SPREAD_100KM_DEG,CONSISTENCY_R_MEAN",
+      "checkpoint_sha256": "5c664ae7dfe206bd37495107e7fe66994e1b0c68fee0008eb96d6c9b8106c505",
+      "best_epoch": 1,
+      "init_seed": 1438401796,
+      "order_seed": 60007756,
+      "eligible_seed_count": 3,
+      "validation": {
+        "daily": {
+          "precision": 0.6865976765301085,
+          "recall": 0.62546249007881,
+          "CSI": 0.32711091132305214
+        },
+        "nonoverlap": {
+          "precision": 0.7024409203059695,
+          "recall": 0.6233309978586554,
+          "CSI": 0.33594154400355564
+        }
+      }
+    },
+    {
+      "family": "triple",
+      "model": "pair_05_06",
+      "seed": "run_03",
+      "selected_channels": [
+        0,
+        5,
+        6
+      ],
+      "selected_names": "MAG,REGIME_ENTROPY,REGIME_GINI",
+      "checkpoint_sha256": "a44d0abc6e354eac149f24a3f71c2d89e9cb3c8ee40a7e9e31143075292856ea",
+      "best_epoch": 1,
+      "init_seed": 1438401796,
+      "order_seed": 60007756,
+      "eligible_seed_count": 3,
+      "validation": {
+        "daily": {
+          "precision": 0.6951004402941534,
+          "recall": 0.649280412509252,
+          "CSI": 0.3393263068213758
+        },
+        "nonoverlap": {
+          "precision": 0.716357166425518,
+          "recall": 0.6423896044770162,
+          "CSI": 0.3480545220390971
+        }
+      }
+    }
+  ],
+  "settings": [
+    {
+      "pred_threshold": 50,
+      "d": 3
+    },
+    {
+      "pred_threshold": 60,
+      "d": 3
+    },
+    {
+      "pred_threshold": 70,
+      "d": 3
+    },
+    {
+      "pred_threshold": 80,
+      "d": 3
+    },
+    {
+      "pred_threshold": 90,
+      "d": 3
+    },
+    {
+      "pred_threshold": 100,
+      "d": 3
+    },
+    {
+      "pred_threshold": 100,
+      "d": 1
+    },
+    {
+      "pred_threshold": 100,
+      "d": 2
+    },
+    {
+      "pred_threshold": 100,
+      "d": 4
+    },
+    {
+      "pred_threshold": 100,
+      "d": 5
+    }
+  ],
+  "target_threshold": 100,
+  "nonoverlap_indices": [
+    0,
+    450,
+    900,
+    1350,
+    1800,
+    2250
+  ],
+  "anchors": {
+    "MAG": {
+      "validation": {
+        "daily": {
+          "precision": 0.6361607595596547,
+          "recall": 0.6854865981955918,
+          "CSI": 0.3320868995942472,
+          "precision_sd": 0.11019164673948756,
+          "recall_sd": 0.06012025653815675,
+          "CSI_sd": 0.03396550364959267
+        },
+        "nonoverlap": {
+          "precision": 0.6614971828838642,
+          "recall": 0.6792886317129431,
+          "CSI": 0.33946705364707513,
+          "precision_sd": 0.12415285292037823,
+          "recall_sd": 0.0667847380126742,
+          "CSI_sd": 0.033706964360733636
+        }
+      },
+      "test": {
+        "daily": {
+          "precision": 0.5756171102130174,
+          "recall": 0.6916937004920234,
+          "CSI": 0.3306279099287737,
+          "precision_sd": 0.06411384523042196,
+          "recall_sd": 0.061470285960925776,
+          "CSI_sd": 0.031070253781842038
+        },
+        "nonoverlap": {
+          "precision": 0.5756852256194233,
+          "recall": 0.6979982221075393,
+          "CSI": 0.3332806297259006,
+          "precision_sd": 0.052455968171076145,
+          "recall_sd": 0.04563558078088469,
+          "CSI_sd": 0.019706829709232383
+        }
+      }
+    },
+    "pair_01_02": {
+      "validation": {
+        "daily": {
+          "precision": 0.7011316156840142,
+          "recall": 0.6332961981452319,
+          "CSI": 0.33534620093000805,
+          "precision_sd": 0.10764276683005429,
+          "recall_sd": 0.05729376639913112,
+          "CSI_sd": 0.02699516494313602
+        },
+        "nonoverlap": {
+          "precision": 0.7217128105472095,
+          "recall": 0.6279956623457648,
+          "CSI": 0.3446401463263488,
+          "precision_sd": 0.11633130378565036,
+          "recall_sd": 0.06500080771972103,
+          "CSI_sd": 0.02833804359063422
+        }
+      },
+      "test": {
+        "daily": {
+          "precision": 0.6688354206329704,
+          "recall": 0.6024205133674029,
+          "CSI": 0.3413806471983904,
+          "precision_sd": 0.07241583320486264,
+          "recall_sd": 0.044062898767289124,
+          "CSI_sd": 0.04000344890181716
+        },
+        "nonoverlap": {
+          "precision": 0.6728376662024104,
+          "recall": 0.6080688021348207,
+          "CSI": 0.3436511308801496,
+          "precision_sd": 0.0769057423832374,
+          "recall_sd": 0.030813029211192687,
+          "CSI_sd": 0.03626844163116909
+        }
+      }
+    },
+    "pair_03_08": {
+      "validation": {
+        "daily": {
+          "precision": 0.6865976765301085,
+          "recall": 0.62546249007881,
+          "CSI": 0.32711091132305214,
+          "precision_sd": 0.10698753818604241,
+          "recall_sd": 0.06047100340411163,
+          "CSI_sd": 0.02520563221970674
+        },
+        "nonoverlap": {
+          "precision": 0.7024409203059695,
+          "recall": 0.6233309978586554,
+          "CSI": 0.33594154400355564,
+          "precision_sd": 0.11557405020254265,
+          "recall_sd": 0.06532751862469595,
+          "CSI_sd": 0.02558179170869557
+        }
+      },
+      "test": {
+        "daily": {
+          "precision": 0.6425065538864695,
+          "recall": 0.6024717894119677,
+          "CSI": 0.3339946047261411,
+          "precision_sd": 0.07436518694741259,
+          "recall_sd": 0.04402339291749711,
+          "CSI_sd": 0.03699681076218748
+        },
+        "nonoverlap": {
+          "precision": 0.6391930944906465,
+          "recall": 0.6095444815455339,
+          "CSI": 0.33611427242492753,
+          "precision_sd": 0.07739498538052325,
+          "recall_sd": 0.0319613956244674,
+          "CSI_sd": 0.031233608323854224
+        }
+      }
+    },
+    "pair_05_06": {
+      "validation": {
+        "daily": {
+          "precision": 0.6951004402941534,
+          "recall": 0.649280412509252,
+          "CSI": 0.3393263068213758,
+          "precision_sd": 0.11015246633158109,
+          "recall_sd": 0.058144366082321784,
+          "CSI_sd": 0.025183641781140784
+        },
+        "nonoverlap": {
+          "precision": 0.716357166425518,
+          "recall": 0.6423896044770162,
+          "CSI": 0.3480545220390971,
+          "precision_sd": 0.11970371095511678,
+          "recall_sd": 0.06034272219556831,
+          "CSI_sd": 0.026495871986665975
+        }
+      },
+      "test": {
+        "daily": {
+          "precision": 0.6705363304589371,
+          "recall": 0.6066582169271,
+          "CSI": 0.3363101934579238,
+          "precision_sd": 0.0711059731667214,
+          "recall_sd": 0.04353554171965866,
+          "CSI_sd": 0.03695699865857636
+        },
+        "nonoverlap": {
+          "precision": 0.6708110125475398,
+          "recall": 0.6103815597021996,
+          "CSI": 0.3404039446822145,
+          "precision_sd": 0.07722390005658078,
+          "recall_sd": 0.033442236230477165,
+          "CSI_sd": 0.03410837566172254
+        }
+      }
+    }
+  },
+  "compare_code_sha256": {
+    "check_inputs.py": "c44a5388d31285243744e3c2a6c3774f85c5bb2f8a2004eda7f111788be8a1ce",
+    "compare_common.py": "964602356a5d0a63c8004e0c96ed83c48525edd84f89b6391372781cf07ced30",
+    "compare_data.py": "ce3e29f22ada194fd6ea9e3e8a70eae322c858366a7d94f883b78d559de91e12",
+    "compare_worker.py": "39abc61f3d53b22e6f0e392ffadc97fe22b9f4ee818032ab5c1c0e39cd25d6ae",
+    "run_compare.py": "535660f926dc077080fa7cb433cb702cc55d0622438f7dfe38345da3b6ebf303",
+    "summarize_compare.py": "ddfeb676d99c360c6d023b04385f70cd53425c55839d8b6b3534562d9cd66108"
+  },
+  "compare_frozen_sha256": "2e371699d189ffc56696b158c3336c9f62cf01ec80e157171075ccb9a399fec1",
+  "compare_vendor_sha256": {
+    "cl10_data.py": "450484e84229c77879afb95a1800a142cce2e96c90e1c3c9182d785b9387d5a0",
+    "model_cl10.py": "17f48c3cf644eb1ef853436e88b3fc2e37c4c63085c31065d54c45ea6512ea01",
+    "predict_cl10.py": "ced03634754df6236340597c13a24d26731f7cfb06c3d5caab406719425b1e2e",
+    "evaluate_cl10_symmetric.py": "0281063df056aee4a25f62ad880af2d7b5ddb33018f4bf8de25dacdc99602277",
+    "spatial_symmetric.py": "10518564f969a5a1381b6d3b69ca0e9186956397eb58ca5aa5700e7cddb7350c",
+    "run_symmetric_evaluation.py": "0d9eea54a8f25199c77b20f35eebbded3df653e4190e5df0022b5c0485c15804",
+    "train_cl10_mag_plus_one.py": "ac8e921c5153bef0f0add328b2e4ec3de37030bbc19636744bedc6285daded99",
+    "train_cl10_mag_plus_two.py": "b0251a8b2aed016135497cc03eb050b39d1743f312c1e5f852aecf4f6dcd4098"
+  },
+  "direction_mask_audit": {
+    "dataset_manifest_sha256": "6c5cac218f20709577718e339a62d72bbe4331de12d87dfb5cedde1b15724447",
+    "candidate": "pair_03_08",
+    "reference": "pair_04_08",
+    "stats": {
+      "frames": 16268,
+      "active_grid_frames": 2351588,
+      "differing_entries_03_vs_04": 505759,
+      "differing_entries_08_vs_08": 0,
+      "different_frames": 15947,
+      "first_differences": [
+        {
+          "frame": "1978-10-08.npz",
+          "different_entries": 8
+        },
+        {
+          "frame": "1978-10-09.npz",
+          "different_entries": 8
+        },
+        {
+          "frame": "1978-10-10.npz",
+          "different_entries": 8
+        },
+        {
+          "frame": "1978-10-11.npz",
+          "different_entries": 8
+        },
+        {
+          "frame": "1978-10-12.npz",
+          "different_entries": 8
+        }
+      ],
+      "valid_03": 1833041,
+      "valid_04": 1930476,
+      "valid_08": 1930476
+    },
+    "B_reusable": false,
+    "A_reusable": true,
+    "note": "Valid-mask comparison on every stored frame, with valid == gray>0 checked. No training/inference/evaluation."
+  },
+  "region": {
+    "region_mode": "anchored_crop",
+    "global_H": 3840,
+    "global_W": 3840,
+    "output_H": 340,
+    "output_W": 200,
+    "dlat_deg": 0.046875,
+    "dlon_deg": 0.09375,
+    "configured_bounds": {
+      "lat_min": 30.05,
+      "lat_max": 45.95,
+      "lon_min": 128.1,
+      "lon_max": 146.8
+    },
+    "crop_box_closed": {
+      "x_min": 3286,
+      "x_max": 3485,
+      "y_min": 2561,
+      "y_max": 2900
+    },
+    "effective_bounds": {
+      "lat_min": 30.046874999999986,
+      "lat_max": 45.984375,
+      "lon_min": 128.0625,
+      "lon_max": 146.8125
+    }
+  },
+  "source_summary_sha256": {
+    "compact_validation_summary_v2/per_run_metrics.csv": "d664eb4d2fe6ceb24cc02f0b868c2676a096ac06feb14e6f2342f9fcb58fb978",
+    "compact_test_summary/test_daily.csv": "1ecd8724360e32cdbe41523b49649c5ceee5a6419321fae886a84b43c06aae12",
+    "compact_test_summary/test_nonoverlap.csv": "55834eaef99cdaf90bacea3f49070d44c0203a0fac623c5eb377d33285d7f548",
+    "compact_test_summary/test_nonoverlap_by_protocol.csv": "407af3c8bc93f6f191cdfb89edb5df422e873e1a39459bb77dceccd8e2e6871b"
+  }
+}
